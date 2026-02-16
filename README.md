@@ -1,6 +1,5 @@
 # 💻 My Dotfiles
 
-Welcome to my system configuration repository!
 These dotfiles are cleanly managed using **GNU Stow** for a modular and instant setup across different machines.
 
 ## 🛠️ Configured Software
