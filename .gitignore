@@ -1,0 +1,17 @@
+# privacy files
+.bash_secrets
+.env
+.ssh/
+*.pem
+*.key
+id_rsa*
+
+# System files
+.DS_Store
+*~
+
+# temp files
+*.swp
+*.swo
+.netrwhist
+Session.vim

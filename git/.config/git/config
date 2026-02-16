@@ -1,0 +1,7 @@
+[user]
+	email = rubenzhu@hotmail.com
+	name = rubenzhu
+[push]
+	autoSetupRemote = true
+[init]
+	defaultBranch = main
