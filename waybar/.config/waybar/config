@@ -1,0 +1,60 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 34,
+    "spacing": 8,
+    "exclusive": true,
+
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    "modules-center": ["clock"],
+    "modules-right": ["tray", "network", "pulseaudio", "custom/battery_merged"],
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "format-icons": {
+            "active": "",
+            "default": ""
+        },
+        "sort-by-number": true
+    },
+
+    "hyprland/window": {
+        "max-length": 50
+    },
+
+    "clock": {
+        "format": "  {:%H:%M    %d/%m/%Y}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>"
+    },
+
+    "custom/battery_merged": {
+        "exec": "upower -i /org/freedesktop/UPower/devices/DisplayDevice | grep percentage | awk '{print $2}'",
+        "interval": 60,
+        "format": "{}  ",
+        "tooltip-format": "Batterie (Interne + Externe) via UPower"
+    },
+
+    "network": {
+        "format-wifi": "{essid}  ",
+        "format-ethernet": "Filaire  ",
+        "format-disconnected": "Hors ligne ⚠ ",
+        "on-click": "nm-connection-editor"
+    },
+
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-muted": " Mute",
+        "format-icons": {
+            "headphone": " ",
+            "default": [" ", " "]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "tray": {
+        "icon-size": 16,
+        "spacing": 10
+    }
+}

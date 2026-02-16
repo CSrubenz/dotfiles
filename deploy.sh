@@ -10,6 +10,6 @@ fi
 mkdir -p ~/.config
 
 cd ~/dotfiles
-stow bash nvim foot fuzzel waybar hyprland
+stow git bash nvim hyprland waybar foot fuzzel mako
 
 echo "[OK] Your dotfiles are in place! Welcome home!"

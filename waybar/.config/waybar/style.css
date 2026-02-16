@@ -1,0 +1,42 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "Noto Sans", "Symbols Nerd Font";
+    font-size: 14px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(30, 30, 46, 0.9); /* Dark theme */
+    color: #cdd6f4;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    color: #a6adc8;
+    background: transparent;
+}
+
+#workspaces button.active {
+    color: #89b4fa; /* Accent bleu */
+    font-weight: bold;
+}
+
+#clock, #pulseaudio, #network, #custom-battery_merged, #tray, #window {
+    padding: 0 12px;
+    margin: 4px 4px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+#custom-battery_merged {
+    color: #a6e3a1; /* Vert */
+}
+
+#pulseaudio {
+    color: #f9e2af; /* Jaune */
+}
+
+#network {
+    color: #cba6f7; /* Violet */
+}
