@@ -94,3 +94,8 @@ if [ -n "$BASH_VERSION" ]; then
         . "$HOME/.bashrc"
     fi
 fi
+
+# Autostart Hyprland on login (TTY1 only)
+if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then
+    exec start-hyprland
+fi

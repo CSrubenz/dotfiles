@@ -7,8 +7,9 @@
 
     "modules-left": ["hyprland/workspaces", "hyprland/window"],
     "modules-center": ["clock"],
-    "modules-right": ["tray", "network", "pulseaudio", "custom/battery_merged"],
+    "modules-right": ["cpu", "memory", "network", "pulseaudio", "custom/battery_merged", "tray"],
 
+    // left
     "hyprland/workspaces": {
         "format": "{icon}",
         "on-click": "activate",
@@ -23,28 +24,42 @@
         "max-length": 50
     },
 
+    // center
     "clock": {
         "format": "  {:%H:%M    %d/%m/%Y}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>"
     },
 
+    // right
+    "cpu": {
+        "interval": 2,
+        "format": " {usage}%",
+        "tooltip": true
+    },
+
+    "memory": {
+        "interval": 2,
+        "format": " {}%",
+        "tooltip-format": "{used:0.1f}G / {total:0.1f}G RAM"
+    },
+
     "custom/battery_merged": {
-        "exec": "upower -i /org/freedesktop/UPower/devices/DisplayDevice | grep percentage | awk '{print $2}'",
+        "exec": "upower -i /org/freedesktop/UPower/devices/DisplayDevice | grep percentage | awk '{print $2}' | cut -d'.' -f1",
         "interval": 60,
-        "format": "{}  ",
-        "tooltip-format": "Batterie (Interne + Externe) via UPower"
+        "format": "  {}%",
+        "tooltip": false
     },
 
     "network": {
-        "format-wifi": "{essid}  ",
-        "format-ethernet": "Filaire  ",
-        "format-disconnected": "Hors ligne ⚠ ",
+        "format-wifi": "🛜  {essid}",
+        "format-ethernet": "🌐  Wired",
+        "format-disconnected": "✈️  Offline",
         "on-click": "nm-connection-editor"
     },
 
     "pulseaudio": {
-        "format": "{volume}% {icon}",
-        "format-bluetooth": "{volume}% {icon}",
+        "format": "{icon} {volume}% ",
+        "format-bluetooth": "{icon} {volume}%",
         "format-muted": " Mute",
         "format-icons": {
             "headphone": " ",
