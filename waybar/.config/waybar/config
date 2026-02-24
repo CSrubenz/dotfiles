@@ -40,14 +40,7 @@
     "memory": {
         "interval": 2,
         "format": " {}%",
-        "tooltip-format": "{used:0.1f}G / {total:0.1f}G RAM"
-    },
-
-    "custom/battery_merged": {
-        "exec": "upower -i /org/freedesktop/UPower/devices/DisplayDevice | grep percentage | awk '{print $2}' | cut -d'.' -f1",
-        "interval": 60,
-        "format": "  {}%",
-        "tooltip": false
+        "tooltip-format": "{used:0.1f}G / {total:0.1f}G"
     },
 
     "network": {
@@ -60,7 +53,7 @@
     "pulseaudio": {
         "format": "{icon} {volume}% ",
         "format-bluetooth": "{icon} {volume}%",
-        "format-muted": " Mute",
+        "format-muted": " ",
         "format-icons": {
             "headphone": " ",
             "default": [" ", " "]
@@ -68,8 +61,18 @@
         "on-click": "pavucontrol"
     },
 
+    "custom/battery_merged": {
+        "exec": "~/.config/waybar/battery_merged.sh",
+        "return-type": "json",
+        "interval": 5,
+        "format": "{text}"
+    },
+
     "tray": {
         "icon-size": 16,
         "spacing": 10
     }
+
 }
+
+
