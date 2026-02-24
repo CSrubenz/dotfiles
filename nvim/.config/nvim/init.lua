@@ -24,17 +24,22 @@ vim.opt.rtp:prepend(lazypath)
 -- ============================================================================
 require("lazy").setup({
 
-    -- Theme
+	-- Theme
     {
-        "RRethy/nvim-base16",
-        lazy = false,
+        "catppuccin/nvim",
+        name = "catppuccin",
         priority = 1000,
         config = function()
-            vim.cmd.colorscheme("base16-darcula")
+            require("catppuccin").setup({
+                flavour = "mocha",
+                transparent_background = true,
+                auto_integrations = true,
+            })
+            vim.cmd.colorscheme("catppuccin")
         end
     },
 
-    -- Lualine (Custom Interface)
+    -- Lualine
     {
         'nvim-lualine/lualine.nvim',
         dependencies = { 'nvim-tree/nvim-web-devicons' },
@@ -676,9 +681,9 @@ vim.opt.undofile = true
 vim.opt.autoread = true
 
 -- Theme (Base Transparency)
-vim.cmd('hi Normal guibg=NONE ctermbg=NONE')
+-- vim.cmd('hi Normal guibg=NONE ctermbg=NONE')
+-- vim.api.nvim_set_hl(0, 'Normal', { bg = 'NONE' })
 vim.opt.termguicolors = true
-vim.api.nvim_set_hl(0, 'Normal', { bg = 'NONE' })
 
 -- ============================================================================
 -- AUTOCMDS

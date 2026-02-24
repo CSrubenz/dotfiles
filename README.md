@@ -12,7 +12,7 @@ These dotfiles are cleanly managed using **GNU Stow** for a modular and instant 
 * **Terminal:** Foot (Ultra-lightweight, Wayland-native)
 * **Launcher:** Fuzzel (Fast, Wayland-native application launcher)
 * **Notifications:** Mako (light pop-up)
-* **Color Scheme:** 🎨 Catppuccin Macchiato (Consistent across Hyprland, Waybar, Foot, Fuzzel, and Mako)
+* **Color Scheme:** 🎨 Catppuccin Mocha (Consistent across Hyprland, Waybar, Foot, Fuzzel, and Mako)
 
 ## 🚀 Installation on a new machine
 
