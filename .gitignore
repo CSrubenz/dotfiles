@@ -9,6 +9,7 @@ id_rsa*
 # System files
 .DS_Store
 *~
+.luarc.json
 
 # temp files
 *.swp
