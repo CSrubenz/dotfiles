@@ -33,29 +33,27 @@ The environment is configured for a French AZERTY layout and heavily relies on t
 
 ### Window Management
 
-* SUPER + Return : Open Terminal (Foot)
-* SUPER + D : Open Launcher (Fuzzel)
-* SUPER + Shift + B : Open Browser (Firefox)
-* SUPER + Shift + F : Open File Manager (PCManFM)
-* SUPER + C : Kill active window
-* SUPER + V : Toggle floating window
-* SUPER + F : Toggle fullscreen
-* SUPER + Arrow Keys : Move focus (Left, Right, Up, Down)
+* SUPER + CONTROL + T : Open Terminal
+* SUPER + CONTROL + D : Open Launcher
+* SUPER + CONTROL + B : Open Browser
+* SUPER + CONTROL + F : Open File Manager
+* SUPER + CONTROL + L : Lock the screen
+* SUPER + CONTROL + K : Kill active windows
+* SUPER + CONTROL + E : Exit hyprland
+* SUPER + CONTROL + S : Screenshot
+* etc
 
 ### Workspaces (AZERTY Native)
 
-* SUPER + [&, é, ", ', (] : Navigate to workspaces 1 to 5
-* SUPER + Shift + [&, é, ", ', (] : Move active window to workspaces 1 to 5
+* SUPER + [&, é, ", ', (, ...] : Navigate to workspaces 1 to 9
+* SUPER + Shift + [&, é, ", ', (, ...] : Move active window to workspaces 1 to 9 (DWM mode)
+* SUPER + ALT + [&, é, ", ', (, ...] : Move active window and move focus to workspaces 1 to 9
 * SUPER + Mouse Scroll : Scroll through workspaces
-
-### Utilities
-
-* SUPER + Shift + S : Screenshot a selected area directly to the clipboard (grim + slurp)
+* etc
 
 ## 💻 Hardware-Specific Notes (ThinkPad T480)
 
 These dotfiles include specific configurations to elegantly handle ThinkPad hardware quirks:
 
-1. PowerBridge Battery: Waybar uses a custom upower module to merge BAT0 (Internal) and BAT1 (External) into a single, mathematically accurate percentage.
-2. French Typography: If paired with my keyd kernel patch for ANSI keyboards, pressing Alt + < in Hyprland outputs « (Left French Quote), and Alt + > outputs ».
-3. Media Keys: Volume, brightness, and media playback keys (Play/Pause/Next) are mapped natively via wpctl, brightnessctl, and playerctl.
+* PowerBridge Battery: Waybar uses a custom script module to merge BAT0 (Internal) and BAT1 (External) into a single, mathematically accurate percentage.
+* Media Keys: Volume, brightness, and media playback keys (Play/Pause/Next) are mapped natively via wpctl, brightnessctl, and playerctl.
