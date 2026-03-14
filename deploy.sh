@@ -8,8 +8,8 @@ if ! command -v stow &> /dev/null; then
 fi
 
 mkdir -p ~/.config
-
 cd ~/dotfiles
+rm ~/.bashrc ~/.profile
 stow -R -t git bash nvim hyprland waybar foot fuzzel mako
 
 echo "[OK] Your dotfiles are in place! Welcome home!"
