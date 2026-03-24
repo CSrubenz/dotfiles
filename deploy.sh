@@ -7,8 +7,6 @@ if ! command -v stow &> /dev/null; then
     exit 1
 fi
 
-mkdir -p ~/.config
-cd ~/dotfiles
 rm ~/.bashrc ~/.profile
 stow -R -t git bash nvim hyprland waybar foot fuzzel mako
 
